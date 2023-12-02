@@ -11,7 +11,7 @@ body {
   max-width: 1650px;
 }
 /* Элементы */
-firstt,
+first,
 second,
 third {
   margin: 5px;
@@ -19,7 +19,7 @@ third {
   float: left;
 }
 
-firstt {
+first {
   width: 30%;
 }
 
@@ -31,7 +31,7 @@ third {
   width: 25%;
 }
 header,
-firstt,
+first,
 second,
 third {
   padding: 10px;
