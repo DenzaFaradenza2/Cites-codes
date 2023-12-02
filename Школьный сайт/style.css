@@ -11,29 +11,29 @@ body {
   max-width: 1650px;
 }
 /* Элементы */
-first,
-second,
-third {
+#first,
+#second,
+#third {
   margin: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   float: left;
 }
 
-first {
+#first {
   width: 30%;
 }
 
-second {
+#second {
   width: 43%;
 }
 
-third {
+#third {
   width: 25%;
 }
 header,
-first,
-second,
-third {
+#first,
+#second,
+#third {
   padding: 10px;
 }
 
