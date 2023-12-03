@@ -25,6 +25,7 @@ header {
   text-align: center;
   padding: 20px;
 }
+
 footer {
   background-color: #252525;
   color: #fff;
@@ -34,7 +35,9 @@ footer {
   bottom: 0;
   width: 85%;
 }
+
 /*Ссылки*/
+
 ul {
   padding: 0; /* Убираем поля */
   margin-left: 10px; /* Отступ слева */
@@ -87,12 +90,12 @@ th:nth-of-type(1),
 th:nth-of-type(3),
 td:nth-of-type(1),
 td:nth-of-type(3) {
-  background-color: #e0e0e0; /* Светло-серый фон для значений n */
+  background-color: #e0e0e0; 
 }
 
 th:nth-of-type(2), td:nth-of-type(2),
 th:nth-of-type(4), td:nth-of-type(4) {
-  background-color: #f2f2f2; /* Темно-серый для значений степеней */ 
+  background-color: #f2f2f2; 
 }
 .dark-row th {
   background-color: #252525; /* Сделаем первую строку темно-серой */
