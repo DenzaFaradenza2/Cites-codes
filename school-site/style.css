@@ -1,6 +1,8 @@
 /* Общие настройки */
 
 *{
+  padding: 0;
+  margin: 0;
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
@@ -8,39 +10,52 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: auto;
   font-family: Verdana, sans-serif;
   background-color: #f4f4f4;
   max-width: 85%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Займет как минимум всю высоту окна браузера */
+}
+h2, h3, p{
+  margin: 10px;
 }
 /* Элементы */
 .content{
   display: flex;
+  flex: 1;
+  @media (orientation: portrait) {
+    flex-wrap: wrap;
+  }
 }
 
 #first-path{
   margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: max-content auto;
-  padding: 18px;
+  padding: 20px;
+  @media (orientation: portrait) {
+    width: 100%;
+  }
 }
 
 
-header {
+header, footer {
   background-color: #252525;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 40px;
+  width: 100%;
+  @media (orientation: portrait) {
+    font-size:small;
+  }
 }
 
 footer {
-  background-color: #252525;
-  color: #fff;
-  text-align: center;
-  padding: 1em;
-  position: absolute;
-  bottom: 0;
-  width: 85%;
+  position: relative; /* Вернем позиционирование в относительное */
+  bottom: auto;
+  flex-shrink: 0;
 }
 
 /*Ссылки*/
@@ -50,21 +65,24 @@ ul {
   margin-left: 10px; /* Отступ слева */
 }
 .boxborder.one {
-  text-align: left;
   padding: 10px;
   display: flex;
+  @media (orientation: portrait) {
+    flex-wrap: wrap;
+  }
 }
 .boxborder.one li {
-  margin: 0 8px;
+  margin: 8px 8px;
 }
 .boxborder.two li {
-  margin: 30px 0;
+  margin: 15px 0;
 }
 .boxborder li a {
   padding: 8px 34px;
   background-color: rgb(224, 224, 224);
   border-radius: 20px;
   color: #252525;
+  display: block; /* Развернем ссылки на весь блок */
 }
 
 .boxborder li a:hover {

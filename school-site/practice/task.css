@@ -1,21 +1,40 @@
 *{
+  padding: 0;
+  margin: 0;
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
   list-style: none;
 }
+
 body {
-    margin: 0 auto;
-    font-family: Verdana, sans-serif;
-    background-color: #f4f4f4;
-    max-width: 85%;
-  }
-  header {
-    background-color: #252525;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
+  margin: auto;
+  font-family: Verdana, sans-serif;
+  background-color: #f4f4f4;
+  max-width: 85%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Займет как минимум всю высоту окна браузера */
+}
+h2, h3, p{
+  margin: 10px;
+}
+header, footer {
+  background-color: #252525;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  width: 100%;
+}
+
+footer {
+  background-color: #252525;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 85%;
+}
 /* Задания */
 .fulltask {
     width: 60%;
@@ -39,6 +58,10 @@ body {
     background-color: rgb(224, 224, 224);
     border-radius: 20px;
     color: #252525;
+  }
+  .fulltask a:hover {
+    background-color: #a7a7a7;
+    color: hsl(0, 0%, 20%);
   }
   
   /* Стили для формы */
@@ -66,13 +89,4 @@ body {
   
   input[type="submit"]:hover {
     background-color: #a7a7a7;
-  }
-  footer {
-    background-color: #252525;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    position: absolute;
-    bottom: 0;
-    width: 85%;
   }
