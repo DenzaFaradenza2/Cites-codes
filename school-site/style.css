@@ -16,21 +16,20 @@ body {
   max-width: 85%;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Займет как минимум всю высоту окна браузера */
+  min-height: 100vh;
 }
 h2, h3, p{
   margin: 10px;
 }
 /* Элементы */
-.content{
+.content{ /*Основная часть*/
   display: flex;
   flex: 1;
   @media (orientation: portrait) {
     flex-wrap: wrap;
   }
 }
-
-#first-path{
+#first-path{ /*Блоки с текстом*/
   margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: max-content auto;
@@ -39,8 +38,6 @@ h2, h3, p{
     width: 100%;
   }
 }
-
-
 header, footer {
   background-color: #252525;
   color: #fff;
@@ -51,9 +48,8 @@ header, footer {
     font-size:small;
   }
 }
-
 footer {
-  position: relative; /* Вернем позиционирование в относительное */
+  position: relative;
   bottom: auto;
   flex-shrink: 0;
 }
