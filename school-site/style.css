@@ -63,7 +63,7 @@ ul {
 .boxborder.one {
   padding: 10px;
   display: flex;
-  @media (orientation: portrait) {
+  @media (orientation: portrait) or (max-width: 1230px) {
     flex-wrap: wrap;
   }
 }
@@ -82,6 +82,19 @@ ul {
 }
 
 .boxborder li a:hover {
+  background-color: #a7a7a7;
+  color: hsl(0, 0%, 20%);
+}
+button{
+  padding: 8px 34px;
+  background-color: rgb(224, 224, 224);
+  border-radius: 20px;
+  color: #252525;
+  display: block;
+  border: rgb(224, 224, 224);
+  font-size:medium;
+}
+button:hover {
   background-color: #a7a7a7;
   color: hsl(0, 0%, 20%);
 }

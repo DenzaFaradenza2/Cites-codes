@@ -25,6 +25,9 @@ header, footer {
   text-align: center;
   padding: 40px;
   width: 100%;
+  @media (orientation: portrait) {
+    font-size:small;
+  }
 }
 
 footer {
@@ -40,8 +43,10 @@ footer {
     width: 60%;
     margin: 20px auto;
     padding: 20px;
-  
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    @media (orientation: portrait) {
+      width: 90%;
+    }
   }
   
   /* Стили для заголовка */
@@ -79,14 +84,17 @@ footer {
   
   /* Стили для кнопки */
   input[type="submit"] {
-    margin: 10px;
-    text-decoration: none;
-    padding: 8px 20px;
+    margin: auto;
+    padding: 8px 34px;
     background-color: rgb(224, 224, 224);
     border-radius: 20px;
     color: #252525;
+    display: block;
+    border: rgb(224, 224, 224);
+    font-size:medium;
   }
   
   input[type="submit"]:hover {
     background-color: #a7a7a7;
+    color: hsl(0, 0%, 20%);
   }
