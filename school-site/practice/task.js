@@ -1,38 +1,54 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var taskForm = document.getElementById('taskForm');
-    taskForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // Предотвращаем отправку формы по умолчанию
-  
-      var userAnswer = document.getElementById('p_answer').value;
-      var correctAnswer = document.getElementById('t_answer').value;
-  
-      if (userAnswer.trim() === correctAnswer) {
-        createNewTask(); // Правильный ответ! Создаем новое задание
-      } else {
-        alert("Попробуйте ещё раз!"); // Неправильный ответ! Можно заменить на более креативное сообщение
-      }
-    });
-  
-    function createNewTask() {
-        alert("Поздравляю! Ответ правильный. Вот ваше новое задание!");
-        newQuestionNumber=1;
-        // Генерируем новое случайное число для следующего задания
-        var newQuestionNumber = newQuestionNumber + 1;
-        
-        // Изменяем текст текущего задания
-        var taskHeader = document.querySelector('.fulltask h2');
-        var taskDescription = document.querySelector('.fulltask p');
-        
-        taskHeader.textContent = 'Задание ' + newQuestionNumber + '.';
-        taskDescription.textContent = 'Новое математическое задание здесь...';
-        
-        // Очищаем поле для ответа
-        document.getElementById('p_answer').value = '';
-        
-        // Генерируем новое значение верного ответа для нового задания
-        var newCorrectAnswer = Math.floor(Math.random() * 100) + 1;
-        document.getElementById('t_answer').value = newCorrectAnswer;
-      
-        // Можно добавить другие действия с новым заданием здесь, например, изменить скрытые значения или загрузить из внешнего источника
-      }
+var tasks = [
+  "Задание 1",
+  "Задание 2",
+  "Задание 3"
+];
+
+// Функция для генерации случайного задания
+function generateTask() {
+  var taskElement = document.getElementById("task");
+  var randomIndex = Math.floor(Math.random() * tasks.length);
+  taskElement.innerHTML = tasks[randomIndex];
+}
+
+// Функция для проверки ответа
+function checkAnswer() {
+  var answerElement = document.getElementById("answer");
+  var resultElement = document.getElementById("result");
+  var answer = answerElement.value;
+
+  // Проверяем правильность ответа
+  if (answer === "правильный ответ") {
+      resultElement.innerHTML = "Правильно!";
+  } else {
+      resultElement.innerHTML = "Неправильно!";
+  }
+
+  // Очищаем поле ввода
+  answerElement.value = "";
+}
+
+// Функция для добавления задания в список
+function addTask(task) {
+  tasks.push(task);
+}
+
+// Функция для вывода заданий на экран
+function displayTasks() {
+  var taskContainer = document.getElementsByClassName("task-container")[0];
+
+  // Очищаем контейнер заданий
+  taskContainer.innerHTML = "<h1>Генератор заданий</h1>";
+
+  // Выводим каждое задание в отдельном блоке
+  tasks.forEach(function(task) {
+      var taskElement = document.createElement("div");
+      taskElement.className = "task";
+      taskElement.innerHTML = task;
+      taskContainer.appendChild(taskElement);
   });
+}
+
+// Инициализация страницы: генерируем первое задание и выводим список заданий
+generateTask();
+displayTasks();

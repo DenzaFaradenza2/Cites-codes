@@ -3,34 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Практическая работа №1.</title>
-  <link href="task.css" type="text/css" rel="stylesheet" />
+  <title>Savantheon</title>
+  <link rel="stylesheet" href="../style.css">
   <script src="task.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Сайт разрабатывается</h1>
-  </header>
-  <div class="fulltask">
-    <h2>Задание 1.</h2>
-    <p>Решить уравнение: 2<sup>x</sup> = 128</p>
-    <p>В строку ответа записать только значение х.</p>
-    <form id="taskForm" method="post">
-      <label for="p_answer">Ответ: </label>
-      <input type="text" id="p_answer" name="p_answer" autofocus autocomplete="off">
-      <br>
-      <input type="submit" value="Готово">
-      <input type="hidden" id="t_answer" name="t_answer" value="7">
-      <input type="hidden" id="number" name="number" value="1">
-      <input type="hidden" id="question" name="question" value="128">
-      <input type="hidden" id="d" name="d" value="2">
-    </form>
-    <div>
-      <a href="../index.html">Выход</a>
+<header>
+  <h1>Сайт разрабатывается</h1>
+</header>
+  <h1>Генератор заданий</h1>
+  <div id="first-path">
+    <div class="task-container">
+      <h1>Генератор заданий</h1>
+      <button onclick="generateTask()">Следующее задание</button>
+      <div class="task" id="task"></div>
+      <input type="text" id="answer" placeholder="Введите ответ">
+      <button onclick="checkAnswer()">Проверить</button>
+      <p id="result"></p>
     </div>
   </div>
-  <footer>
-    <p>&copy; 2023 Remake by DaniilMight</p>
-  </footer>
+
+<footer>
+  <p>&copy; 2023 Remake by DaniilMight</p>
+</footer>
 </body>
 </html>

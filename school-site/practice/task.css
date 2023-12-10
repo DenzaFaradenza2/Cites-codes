@@ -23,7 +23,7 @@ header, footer {
   background-color: #252525;
   color: #fff;
   text-align: center;
-  padding: 40px;
+  padding: 30px;
   width: 100%;
   @media (orientation: portrait) {
     font-size:small;
